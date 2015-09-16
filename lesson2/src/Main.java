@@ -18,5 +18,9 @@ public class Main {
 			System.out.print(a+" ");
 		}
 	}
+	
+	public static void test(){
+		System.out.println("test");
+	}
 
 }
