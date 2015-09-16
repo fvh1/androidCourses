@@ -17,11 +17,22 @@ public class Main {
 		for (String a:arr){
 			System.out.print(a+" ");
 		}*/
-		test();
+		System.out.print(sum(3,4));
 	}
 	
 	public static void test(){
 		System.out.println("test");
+	}
+	public static void test(String s){
+		System.out.println(s+" test");
+	}
+	public static void test(String s, int it){
+		for (int i=0;i<it;i++){
+			System.out.println(s+" test");
+		}
+	}
+	public static int sum(int a, int b){
+		return a+b;
 	}
 
 }
