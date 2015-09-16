@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 
 public class Main {
@@ -17,7 +17,10 @@ public class Main {
 		for (String a:arr){
 			System.out.print(a+" ");
 		}*/
-		System.out.print(sum(3,4));
+		System.out.println(OneMoreClass.square(4));
+		System.out.println(OneMoreClass.square(2,4));
+		System.out.println(OneMoreClass.square(3,4,5));
+		System.out.println(OneMoreClass.square(4,4,14));
 	}
 	
 	public static void test(){
