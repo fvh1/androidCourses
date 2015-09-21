@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -5,10 +6,20 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Car car1=new Car("opel","astra","red",14);
+		Hospital hospital=new Hospital("Hospital #1",5,2,5);
+		hospital.populateDoctors();
+		hospital.addNewPatient();
+		hospital.addNewPatient();
+		hospital.addNewPatient();
+		hospital.addNewPatient();
+		hospital.addNewPatient();
+		Scanner sc= new Scanner(System.in);
+		sc.close();
+		Patient [] listOfPatients=hospital.getListOfPatients();
 		
-		
+		for (Patient patient:listOfPatients){
+			System.out.println(patient.toString()+"- "+patient.getDoctor().toString());
+		}
 		
 	}
 
