@@ -17,9 +17,9 @@ public class Doctor extends Human {
 		Scanner sc= new Scanner(System.in);
 		boolean correctSpecialization=false;
 		while (!correctSpecialization){
-			System.out.print("Specialization (traumatologist|not traumatologist):)");
+			System.out.print("Specialization (traumatologist|non-traumatologist):");
 			String specialization=sc.next();
-			if (specialization.equalsIgnoreCase("traumatologist")||specialization.equalsIgnoreCase("not traumatologist")){
+			if (specialization.equalsIgnoreCase("traumatologist")||specialization.equalsIgnoreCase("non-traumatologist")){
 				this.specialization=specialization;
 				correctSpecialization=true;
 			}

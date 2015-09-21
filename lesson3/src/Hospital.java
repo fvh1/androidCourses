@@ -28,10 +28,10 @@ public class Hospital {
 	}
 	private String diagnostics(String diagnosis){
 		String specialization="";
-		if (diagnosis=="broken leg"||diagnosis=="broken arm"){
+		if (diagnosis.equalsIgnoreCase("broken_leg")||diagnosis.equalsIgnoreCase("broken_arm")){
 			specialization="traumatologist";
 		}else{
-			specialization="not traumatologist";
+			specialization="non-traumatologist";
 		}
 		return specialization;
 	}
@@ -40,7 +40,7 @@ public class Hospital {
 		this.listOfPatients.add(patient);
 		String specialization=diagnostics(patient.getDiagnosis());
 		for (Doctor doctor:listOfDoctors){
-			if (doctor.getSpecialization()==specialization){
+			if (doctor.getSpecialization().equalsIgnoreCase(specialization)){
 				doctor.addPatient(patient);
 			}
 		}

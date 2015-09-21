@@ -21,7 +21,7 @@ public class Human {
 		this.birthDate=new Date(sc.nextInt(), sc.nextInt(),sc.nextInt());
 		boolean correctSex=false;
 		while (!correctSex){
-			System.out.print("Sex (male/female:)");
+			System.out.print("Sex (male/female):");
 			String sex=sc.next();
 			if (sex.equalsIgnoreCase("male")){
 				this.isNotAWoman=true;
