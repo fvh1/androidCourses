@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -27,8 +28,7 @@ public class Doctor extends Human {
 	}
 	private Hospital hospital;
 	private String specialization;
-	//int max=hospital.getMaxNumberOfPatientsPerDoctor();
-	private Patient [] listOfPatients=new Patient[5];
+	private ArrayList<Patient> listOfPatients= new ArrayList<Patient>();
 	public String getSpecialisation() {
 		return specialization;
 	}
@@ -37,23 +37,12 @@ public class Doctor extends Human {
 		this.specialization = specialization;
 	}
 	
-	public Patient[] getListOfPatients() {
+	public ArrayList<Patient> getListOfPatients() {
 		return listOfPatients;
 	}
-	public boolean addPatient(Patient patient){
-		boolean isAdded=false;
-		for (int i=0;i<10;i++){
-			
-			try {
-				boolean b=listOfPatients[i]==null;
-			}
-			finally{
-				listOfPatients[i]=patient;
-				isAdded=true;
-			}
-			
-		}
-		return isAdded;
+	public void addPatient(Patient patient){
+		this.listOfPatients.add(patient);
+		
 	}
 	public Hospital getHospital() {
 		return hospital;

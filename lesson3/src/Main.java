@@ -6,8 +6,8 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Hospital hospital=new Hospital("Hospital #1",5,2,5);
-		hospital.populateDoctors();
+		Hospital hospital=new Hospital("Hospital #1");
+		hospital.addDoctor();
 		hospital.addNewPatient();
 		hospital.addNewPatient();
 		hospital.addNewPatient();
@@ -15,10 +15,10 @@ public class Main {
 		hospital.addNewPatient();
 		Scanner sc= new Scanner(System.in);
 		sc.close();
-		Patient [] listOfPatients=hospital.getListOfPatients();
-		
-		for (Patient patient:listOfPatients){
-			System.out.println(patient.toString()+"- "+patient.getDoctor().toString());
+		for (Doctor doctor:hospital.getListOfDoctors()){
+			for(Patient patient:doctor.getListOfPatients()){
+				System.out.println("Patient "+patient.toString()+"- Doctor "+doctor.toString());
+			}
 		}
 		
 	}
