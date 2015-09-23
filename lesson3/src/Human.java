@@ -106,4 +106,5 @@ public class Human {
 			return false;
 		return true;
 	}
+}
 	
