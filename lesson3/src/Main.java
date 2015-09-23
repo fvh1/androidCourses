@@ -10,7 +10,7 @@ public class Main {
 		Hospital hospital=new Hospital("Hospital #1");
 		System.out.println("Doctor#1");
 		hospital.addDoctor();
-		System.out.println("Doctor#1");
+		System.out.println("Doctor#2");
 		hospital.addDoctor();
 		System.out.println("Patient#1");
 		hospital.addNewPatient();
