@@ -16,7 +16,7 @@ public class Doctor extends Human {
 	public Doctor(Hospital hospital){
 		super();
 		this.hospital=hospital;
-		Scanner sc= new Scanner(System.in).useDelimiter("\\r\\n");
+		Scanner sc= new Scanner(System.in).useDelimiter("\\s*\\n");
 		boolean correctSpecialization=false;
 		ArrayList<String> listOfSpecializations=hospital.getlistOfSpecializations();
 		while (!correctSpecialization){

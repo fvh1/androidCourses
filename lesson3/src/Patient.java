@@ -25,7 +25,7 @@ public class Patient extends Human {
 	}
 	public Patient(Hospital hospital){
 		super();
-		Scanner sc= new Scanner(System.in).useDelimiter("\\r\\n");;
+		Scanner sc= new Scanner(System.in).useDelimiter("\\s*\\n");;
 		boolean correctDiagnosis=false;
 		while (!correctDiagnosis){
 			System.out.print("Diagnosis: (");
@@ -96,4 +96,3 @@ public class Patient extends Human {
 	
 
 }
-

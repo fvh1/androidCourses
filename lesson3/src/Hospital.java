@@ -12,7 +12,7 @@ public class Hospital {
 	public Hospital(String name) {
 		this.name = name;
 		try {
-			BufferedReader illnessList = new BufferedReader(new FileReader("src\\illnessList.csv"));
+			BufferedReader illnessList = new BufferedReader(new FileReader("src/illnessList.csv"));
 			while (illnessList.ready()){
 				String [] currentIllness=illnessList.readLine().split(";");
 				this.illnessSpecialization.put(currentIllness[0], currentIllness[1]);
@@ -117,4 +117,3 @@ public class Hospital {
 		return true;
 	}
 }
-
