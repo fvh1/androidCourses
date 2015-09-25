@@ -10,10 +10,13 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Date date=new Date();
-		SimpleDateFormat format=new SimpleDateFormat("HH:mm:ss.SSS dd.MM.Y");
-		System.out.println(format.format(date));
-		Calendar calendar=new GregorianCalendar();
-		System.out.println(calendar.getTime());
+		//Triangle triangle= new Triangle();
+		//System.out.println(triangle.getSquare());
+		//Circle circle= new Circle();
+		//System.out.println(circle.getSquare());
+		//Rectangle rectangle= new Rectangle();
+		//System.out.println(rectangle.getSquare());
+		Foursquare foursquare= new Foursquare();
+		System.out.println(foursquare.getSquare());
 	}
 }

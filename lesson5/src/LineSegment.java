@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 
 public class LineSegment {
 	public LineSegment(Point a, Point b) {
@@ -10,18 +8,25 @@ public class LineSegment {
 		this.A = new Point(a,b);
 		this.B = new Point(c,d);
 	}
-	public LineSegment() {
-		Scanner sc= new Scanner(System.in);
-		this.A = new Point(sc.nextDouble(),sc.nextDouble());
-		this.B = new Point(sc.nextDouble(),sc.nextDouble());
-	}
-	Point A;
-	Point B;
+	private Point A;
+	private Point B;
 	public Point getA() {
 		return A;
 	}
 	public Point getB() {
 		return B;
+	}
+	public double getK(){
+		return (this.A.getB()-this.B.getB())/(this.A.getA()-this.B.getA());
+	}
+	boolean isPerpendicular (LineSegment line){
+		if((this.A.getA()-this.B.getA())==0){
+			return (line.A.getB()-line.B.getB())==0;
+		}else if((line.A.getA()-line.B.getA())==0){
+			return (this.A.getB()-this.B.getB())==0;
+		}else {
+			return (this.A.getB()-this.B.getB())/(this.A.getA()-this.B.getA())*(line.A.getB()-line.B.getB())/(line.A.getA()-line.B.getA())==-1;
+		}
 	}
 	public String toString(){
 		return "("+this.A.toString()+','+this.B.toString()+")"; 

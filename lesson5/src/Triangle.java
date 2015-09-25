@@ -1,9 +1,16 @@
 
 public class Triangle extends Figure {
 	public Triangle() {
+		System.out.println("Init triangle");
+		System.out.println("Point#1");
 		this.points[0]=new Point();
+		System.out.println("Point#2");
 		this.points[1]=new Point();
+		System.out.println("Point#3");
 		this.points[2]=new Point();
+		this.ab=this.points[0].getDistance(points[1]);
+		this.bc=this.points[1].getDistance(points[2]);
+		this.ac=this.points[2].getDistance(points[0]);
 	}
 	public Triangle(Point a, Point b, Point c) {
 		this.points[0]=a;
@@ -15,10 +22,10 @@ public class Triangle extends Figure {
 		this.points[1]=new Point(c, d);
 		this.points[2]=new Point(e, f);
 	}
-	Point [] points=new Point[3];
-	double ab=this.points[0].getDistance(points[1]);
-	double bc=this.points[1].getDistance(points[2]);
-	double ac=this.points[2].getDistance(points[0]);
+	private Point [] points=new Point[3];
+	private double ab;
+	private double bc;
+	private double ac;
 	@Override
 	public double getSquare() {
 		double p=(this.ab+this.ac+this.bc)/2;

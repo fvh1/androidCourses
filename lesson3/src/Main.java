@@ -1,3 +1,4 @@
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,6 +13,8 @@ public class Main {
 		hospital.addDoctor();
 		System.out.println("Doctor#2");
 		hospital.addDoctor();
+		SimpleDateFormat everageAge=new SimpleDateFormat("—редний возраст докторов y лет M мес€цев W недель F дней H часов и m минут");
+		System.out.println(everageAge.format(hospital.getEverageDoctorsAge()));
 		System.out.println("Patient#1");
 		hospital.addNewPatient();
 		System.out.println("Patient#2");

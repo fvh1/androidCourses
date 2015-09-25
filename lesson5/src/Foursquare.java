@@ -1,9 +1,9 @@
 
-public class Rectangle extends Figure {
-	public Rectangle() {
-		boolean isRectangle=false;
-		while(!isRectangle){
-			System.out.println("Init rectangle");
+public class Foursquare extends Figure {
+	public Foursquare() {
+		boolean isFoursquare=false;
+		while(!isFoursquare){
+			System.out.println("Init forsquare");
 			System.out.println("Point#1");
 			this.points[0]=new Point();
 			System.out.println("Point#2");
@@ -16,19 +16,24 @@ public class Rectangle extends Figure {
 			LineSegment bc=new LineSegment(this.points[1],this.points[2]);
 			LineSegment cd=new LineSegment(this.points[2],this.points[3]);
 			LineSegment da=new LineSegment(this.points[3],this.points[0]);
-			isRectangle=ab.isPerpendicular(bc)&&bc.isPerpendicular(cd)&&cd.isPerpendicular(da);
-			if (!isRectangle){
-				System.out.println("Not rectangle");
+			isFoursquare=ab.isPerpendicular(bc)
+					&&bc.isPerpendicular(cd)
+					&&cd.isPerpendicular(da)
+					&&(points[0].getDistance(points[1])==points[1].getDistance(points[2]))
+					&&(points[1].getDistance(points[2])==points[2].getDistance(points[3]))
+					&&(points[2].getDistance(points[3])==points[3].getDistance(points[0]));
+			if (!isFoursquare){
+				System.out.println("Not foursquare");
 			}
 		}
 	}
-	public Rectangle(Point a, Point b, Point c, Point d) {
+	public Foursquare(Point a, Point b, Point c, Point d) {
 		this.points[0]=a;
 		this.points[1]=b;
 		this.points[2]=c;
 		this.points[3]=d;
 	}
-	public Rectangle(double a, double b, double c, double d, double e, double f, double g, double h) {
+	public Foursquare(double a, double b, double c, double d, double e, double f, double g, double h) {
 		this.points[0]=new Point(a, b);
 		this.points[1]=new Point(c, d);
 		this.points[2]=new Point(e, f);
@@ -40,6 +45,7 @@ public class Rectangle extends Figure {
 	@Override
 	public double getSquare() {
 		
-		return this.points[0].getDistance(points[1])*this.points[1].getDistance(points[2]);
+		return this.points[0].getDistance(points[1])*this.points[0].getDistance(points[1]);
 	}
+
 }

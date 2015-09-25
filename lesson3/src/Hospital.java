@@ -3,9 +3,14 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Set;
+
+import javax.xml.crypto.Data;
 
 
 public class Hospital {
@@ -115,5 +120,16 @@ public class Hospital {
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
+	}
+	public Calendar getEverageDoctorsAge(){
+		long everage=0;
+		Date current=new Date();
+		for(Doctor doctor:this.listOfDoctors){
+			everage+=current.getTime()-doctor.getBirthDate().getTime();
+		}
+		everage=everage/this.listOfDoctors.size();
+		Calendar avg=new GregorianCalendar();
+		avg.setTimeInMillis(everage);
+		return avg;
 	}
 }
