@@ -16,7 +16,7 @@ public class Main {
 		//System.out.println(circle.getSquare());
 		//Rectangle rectangle= new Rectangle();
 		//System.out.println(rectangle.getSquare());
-		Foursquare foursquare= new Foursquare();
-		System.out.println(foursquare.getSquare());
+		//Foursquare foursquare= new Foursquare();
+		//System.out.println(foursquare.getSquare());
 	}
 }
