@@ -126,8 +126,9 @@ public class Main {
 		} 
 	}
 	public static void main(String[] args) {
+		
 		fileIO(repeatRemover(inputArrayList('g')));
-		//randomMan(setHashMap());
+		randomMan(setHashMap());
 	}
 
 }
